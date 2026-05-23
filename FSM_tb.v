@@ -1,0 +1,52 @@
+`timescale 1ns / 1ps
+
+module FSM_tb;
+
+
+	reg clk;
+	reg rst_n;
+	reg in;
+
+
+	wire [3:0] out_data;
+
+
+	FSM1 FSM(
+		clk,
+		rst_n,
+		in,
+		out_data
+	);
+
+	initial begin
+		clk = 0;
+		forever #10 clk = ~clk;
+	end
+
+	initial begin
+		$dumpfile("FSM1_wave.vcd");
+		$dumpvars(0, FSM_tb);
+	end
+
+	initial begin
+
+		rst_n = 0;
+		in = 0;
+		#25;
+		rst_n = 1;
+	
+		#20;in = 1;
+
+		#20;in = 0;
+
+		#20;in = 1;
+
+		#20;in = 0;
+		#40;
+
+		$display("FSM1 test finish");
+		$finish;
+	end
+
+
+endmodule

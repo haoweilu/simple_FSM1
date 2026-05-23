@@ -1,0 +1,89 @@
+$date
+	Sat May 23 14:40:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module FSM_tb $end
+$var wire 4 ! out_data [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # in $end
+$var reg 1 $ rst_n $end
+$scope module FSM $end
+$var wire 1 " clk $end
+$var wire 1 # in $end
+$var wire 1 $ rst_n $end
+$var reg 3 % next_state [2:0] $end
+$var reg 4 & out_data [3:0] $end
+$var reg 3 ' state [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+0$
+0#
+0"
+b0 !
+$end
+#10000
+1"
+#20000
+0"
+#25000
+1$
+#30000
+1"
+#40000
+0"
+#45000
+b1 %
+1#
+#50000
+b1 !
+b1 &
+b1 '
+1"
+#60000
+0"
+#65000
+b10 %
+0#
+#70000
+b1000 !
+b1000 &
+b10 '
+1"
+#80000
+0"
+#85000
+b11 %
+1#
+#90000
+b1111 !
+b1111 &
+b11 '
+1"
+#100000
+0"
+#105000
+b0 %
+0#
+#110000
+b0 !
+b0 &
+b0 '
+1"
+#120000
+0"
+#130000
+1"
+#140000
+0"
+#145000
