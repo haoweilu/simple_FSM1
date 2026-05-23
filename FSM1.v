@@ -27,12 +27,13 @@ module FSM1(
 
 	always @(*)begin
 		case(state)
-			s0: out_data <= 4'h0;
-			s1: out_data <= 4'h1;
-			s2: out_data <= 4'h8;
-			s3: out_data <= 4'hf;
-			default: out_data <= 4'h0;
-		endcase
+				s0: out_data <= 4'h0;
+				s1: out_data <= 4'h1;
+				s2: out_data <= 4'h8;
+				s3: out_data <= 4'hf;
+				default: out_data <= 4'h0;
+			endcase		
+		end
 	end
 
 endmodule
